@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "error",
+      "type": "com.iandna.gateway.config.model.CustomErrorProperties",
+      "sourceType": "com.iandna.gateway.config.model.CustomErrorProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "error.abcd",
+      "type": "java.lang.String",
+      "sourceType": "com.iandna.gateway.config.model.CustomErrorProperties"
+    },
+    {
+      "name": "error.e999",
+      "type": "java.lang.String",
+      "sourceType": "com.iandna.gateway.config.model.CustomErrorProperties"
+    }
+  ],
+  "hints": []
+}
