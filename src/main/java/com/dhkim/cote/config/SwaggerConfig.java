@@ -21,9 +21,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
-    private static final String API_NAME = "Study API";
+    private static final String API_NAME = "Coding Test API";
     private static final String API_VERSION = "0.0.1";
-    private static final String API_DESCRIPTION = "Study API 명세서";
+    private static final String API_DESCRIPTION = "설명";
 
     @Bean
     public Docket api() {
@@ -42,7 +42,8 @@ public class SwaggerConfig {
                 .globalOperationParameters(globalParamters)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.kjh.study.api"))
+//                .apis(RequestHandlerSelectors.basePackage("com.dhkim.cote"))
+                .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build();
     }

@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -13,7 +12,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import com.dhkim.cote.config.interceptor.CommonInterceptor;
 
 @Configuration
-@EnableWebMvc
 public class WebConfig implements WebMvcConfigurer{ 
 	
 	@Autowired
@@ -27,6 +25,7 @@ public class WebConfig implements WebMvcConfigurer{
 	  	      "classpath:/META-INF/resources/",
 	  	      "classpath:/static/",
 	  	      "classpath:/public/",
+	  	      "/swagger-ui/index.html",
 	  	      "classpath:/META-INF/resources/webjars/",
 	  	      "classpath:/resources/"
 	  	      //"/resources/"
@@ -46,9 +45,8 @@ public class WebConfig implements WebMvcConfigurer{
 		      registry.addResourceHandler("/**").addResourceLocations(
 		          CLASSPATH_RESOURCE_LOCATIONS);
 		}
-
-        registry.addResourceHandler("swagger-ui.html")
-        .addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/swagger-ui.html**")
+        .addResourceLocations("classpath:/META-INF/resources/swagger-ui.html");
         registry.addResourceHandler("/webjars/**")
         .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
