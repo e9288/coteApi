@@ -1,4 +1,4 @@
-package com.iandna.gateway.util;
+package com.dhkim.cote.util;
 
 import java.io.File;
 import java.io.FileInputStream;

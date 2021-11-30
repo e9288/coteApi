@@ -1,13 +1,13 @@
-package com.iandna.gateway.programmers;
+package com.dhkim.cote.programmers;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 import java.util.Map.Entry;
+import java.util.Set;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class ProgSolution {
 	
 	
@@ -61,6 +61,21 @@ public class ProgSolution {
 			if (entry.getValue() >= 1) {
 				answer = entry.getKey();
 				return answer;
+			}
+		}
+		return answer;
+	}
+	
+	public static boolean hash_2_solution(String[] phone_book) {
+		boolean answer = true;
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		for (String number : phone_book) {
+			map.put(number, 0);
+		}
+		for (String number : phone_book) {
+			for (int i = 0; i < number.length(); i++) {
+				if (map.containsKey(number.substring(0, i)))
+					return false;
 			}
 		}
 		return answer;

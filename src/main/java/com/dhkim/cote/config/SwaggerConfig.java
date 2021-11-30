@@ -1,4 +1,4 @@
-package com.iandna.gateway.config;
+package com.dhkim.cote.config;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class SwaggerConfig {
 
     @Bean
     public Docket api() {
-        Parameter parameterBuilder = new ParameterBuilder();
+        Parameter parameterBuilder = new ParameterBuilder()
             .name(HttpHeaders.AUTHORIZATION)
             .description("Access Tocken")
             .modelRef(new ModelRef("string"))

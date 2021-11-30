@@ -4,7 +4,7 @@
  * Copyright (c) 2009 TA Networks
  * All rights reserved.
  */
-package com.iandna.gateway.util;
+package com.dhkim.cote.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

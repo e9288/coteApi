@@ -1,10 +1,10 @@
-package com.iandna.gateway.config.exceptionHandler;
+package com.dhkim.cote.config.exceptionHandler;
 
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.iandna.gateway.config.exception.CommonJsonException;
-import com.iandna.gateway.config.model.ResponseModel;
+import com.dhkim.cote.config.exception.CommonJsonException;
+import com.dhkim.cote.config.model.ResponseModel;
 
 @RestControllerAdvice
 public class BadResponseHandler {

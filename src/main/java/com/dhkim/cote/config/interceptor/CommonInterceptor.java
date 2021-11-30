@@ -1,4 +1,4 @@
-package com.iandna.gateway.config.interceptor;
+package com.dhkim.cote.config.interceptor;
 
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
@@ -17,10 +17,10 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.WebUtils;
 
-import com.iandna.gateway.config.exception.CommonJsonException;
-import com.iandna.gateway.config.model.CustomErrorProperties;
-import com.iandna.gateway.util.AriaUtil;
-import com.iandna.gateway.util.DateUtil;
+import com.dhkim.cote.config.exception.CommonJsonException;
+import com.dhkim.cote.config.model.CustomErrorProperties;
+import com.dhkim.cote.util.AriaUtil;
+import com.dhkim.cote.util.DateUtil;
 
 @Component
 public class CommonInterceptor implements HandlerInterceptor {

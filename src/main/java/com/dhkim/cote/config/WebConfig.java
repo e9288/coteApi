@@ -1,4 +1,4 @@
-package com.iandna.gateway.config;
+package com.dhkim.cote.config;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import com.iandna.gateway.config.interceptor.CommonInterceptor;
+import com.dhkim.cote.config.interceptor.CommonInterceptor;
 
 @Configuration
 @EnableWebMvc

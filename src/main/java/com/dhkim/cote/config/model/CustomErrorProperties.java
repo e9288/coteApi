@@ -1,4 +1,4 @@
-package com.iandna.gateway.config.model;
+package com.dhkim.cote.config.model;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

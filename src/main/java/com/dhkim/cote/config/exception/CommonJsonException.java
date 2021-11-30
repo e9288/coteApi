@@ -1,4 +1,4 @@
-package com.iandna.gateway.config.exception;
+package com.dhkim.cote.config.exception;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
