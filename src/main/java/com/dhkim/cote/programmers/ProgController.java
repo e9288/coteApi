@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.Operation;
 import net.sf.json.JSONObject;
 
 @RestController
@@ -34,6 +35,7 @@ public class ProgController {
 	}
 	
 	@GetMapping(value = "/hash_1")
+	@Operation(summary = "programmers hash_1 완주하지 못한 선수", description = "My Description")
 	public JSONObject hash_1(@RequestBody HashVo hash_vo) {
 		JSONObject result = null;
 		try {
@@ -51,6 +53,22 @@ public class ProgController {
 	
 	@GetMapping(value = "/hash_2")
 	public JSONObject hash_2(@RequestBody HashVo hash_vo) {
+		JSONObject result = null;
+		try {
+			logger.info("RequestBody : " + hash_vo.toString());
+			boolean answer = this.p_solution.hash_2_solution(hash_vo.getPhone_book());
+			
+			result = new JSONObject();
+			result.put("answer", answer);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	@GetMapping(value = "/hash_3")
+	public JSONObject hash_3(@RequestBody HashVo hash_vo) {
 		JSONObject result = null;
 		try {
 			logger.info("RequestBody : " + hash_vo.toString());
